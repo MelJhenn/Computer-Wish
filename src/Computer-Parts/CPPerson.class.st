@@ -20,6 +20,11 @@ CPPerson >> age: anObject [
 	age := anObject
 ]
 
+{ #category : #'as yet unclassified' }
+CPPerson >> introduceYourself [
+	^'Hola mi nombre es ',name,', tengo ',age asString,' años'
+]
+
 { #category : #accessing }
 CPPerson >> name [
 
