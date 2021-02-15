@@ -26,3 +26,14 @@ CPPersonTest >> testBasic [
 	self assert: person1 introduceYourself equals: 'Hola mi nombre es Milton, tengo 33 años'.
 	
 ]
+
+{ #category : #tests }
+CPPersonTest >> testFiles [
+	|path file stream|
+	path:= '.'.
+	file:= path asFileReference.
+	file:= file/'prueba.pdf'.
+	stream:= file writeStream.
+	stream nextPutAll: 'Hola Mundo'.
+	stream close.
+]
